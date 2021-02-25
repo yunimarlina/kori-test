@@ -21,8 +21,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       CardType: {
-        type: Sequelize.STRING,
-        // values: ["Master","Visa"]
+        type: Sequelize.ENUM,
+        values: ["Master","Visa"]
       },
       cardExpDate: {
         type: Sequelize.STRING

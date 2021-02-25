@@ -19,7 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     CVV: DataTypes.STRING,
     cardName: DataTypes.STRING,
     Username: DataTypes.STRING,
-    CardType: DataTypes.STRING,
+    CardType: {
+      type: DataTypes.ENUM,
+      values: ["Master","Visa"]
+    },
     cardExpDate: DataTypes.STRING
   }, {
     sequelize,
